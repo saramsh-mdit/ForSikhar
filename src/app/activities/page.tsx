@@ -11,12 +11,13 @@ const ActivitiesPage = () => {
     <article className={style.article_page}>
       <section className={style.article_header}>
         <h2 className={style.article_title}>Activities</h2>
+        <p>Home / Activities</p>
       </section>
       <div className={style.article_menu}>
         <button className="btn btn-primary">Past Activities</button>
         <button className="btn btn-secondary">Upcoming Activities</button>
       </div>
-      <section className={style.article_body}>
+      <section className={style.container}>
         <div className={style.grid_responsive}>
           {number?.map((item, index) => (
             <ActivitiesCard key={index} />
@@ -24,6 +25,15 @@ const ActivitiesPage = () => {
         </div>
       </section>
       <Pagination />
+      <div className={style.article_footer}>
+        <section className={`${style.container} ${style.footer_container}`}>
+          <h2 className={style.article_footer_title}>
+            Get all the latest news, updates and documents delivered directly to
+            your inbox instantly
+          </h2>
+          <button className="btn btn-primary">Subscribe to ANSSD</button>
+        </section>
+      </div>
     </article>
   );
 };
